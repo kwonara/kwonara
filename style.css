@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Do+Hyeon&family=Tourney:wght@300&display=swap');
 *{margin: 0; padding: 0; box-sizing: border-box;}
 ul,ol{list-style: none; color: inherit;}
 a{text-decoration: none;}
@@ -20,6 +20,8 @@ article{height: 100vh;}
     width: 100%;
     margin: auto;
     position: relative;
+    font-family: 'Tourney','Do Hyeon';
+    font-size: 38px;
 }
 
 #typing{
@@ -99,28 +101,45 @@ article{height: 100vh;}
 }
 /*=================================*/
 #intro{
-    width: 1200px;
+    width: 100%;
     margin: auto;
     position: relative;
 }
-
+.proBack{
+    position: absolute;
+    width: 480px;
+    height: 720px;
+    background-color: #caaae8;
+    top: 80px; left: 240px;
+    z-index: 1;
+}
 h1{
     position: absolute;
-    top: 70px;
-    font-size: 80px;
+    top: 90px; left: 250px;
+    font-size: 75px;
+    color: #fff;
+    text-shadow: 1px 2px rgba(0, 0, 0, 0.5);
     font-weight: 700;
     padding-left: 50px;
+    z-index: 999;
+}
+.introBox{
+    width: 1200px;
+    margin: auto;
+    position: relative;
 }
 .photo{
     position: absolute;
     top: 200px;
     padding-left: 50px;
+    z-index: 999;
 }
 .profile_text{
     display: flex;
     position: absolute;
-    top: 270px;
+    top: 270px;;
     right: -700px;
+    z-index: 999;
 }
 .profile_text.on{
     animation: show 1s ease-out;
@@ -141,6 +160,7 @@ h1{
 .profile_text > .proTxt:nth-child(1){
     padding: 0 120px;
 }
+
 .pro h3{
     font-size: 28px;
     font-weight: 700px;
@@ -200,11 +220,13 @@ hr{
 .Sl_tit button{
     padding: 20px 65px;
     background-color: #eae7e2;
+    color: #000;
     outline: none;
     border: none;
 }
 .Sl_tit button:hover{
     background-color: #dbd1c0;
+    color: #000;
 }
 .Sl_type{padding: 30px 0 35px 0;}    
 .Sl_type h3{
@@ -337,16 +359,21 @@ hr{
 .Nf_tit button{
     padding: 20px 65px;
     background-color: #e9f1e3;
+    color: #000;
     outline: none;
     border: none;
 }
 .Nf_tit button:hover{
     background-color: #dae8d0;
+    color: #000;
 }
 .Nf_type{padding: 30px 0 35px 0}    
 .Nf_type h3{
     font-size: 18px;
     padding-top: 30px;
+}
+.Nf_type h3:first-child{
+    padding:0;
 }
 .Nf_type p{
     font-size:16px;
