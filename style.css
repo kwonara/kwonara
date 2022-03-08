@@ -8,7 +8,11 @@ body{
     font-family: 'Noto Sans', sans-serif;
     font-weight: 400;
 }
-
+#container{
+    width:100%;
+    min-width:1200px;
+    overflow:hidden;
+}
 article{height: 100vh;}
 
 /*=================================*/
@@ -116,16 +120,21 @@ h1{
     display: flex;
     position: absolute;
     top: 270px;
-    right: 50px;
+    right: -700px;
+}
+.profile_text.on{
     animation: show 1s ease-out;
+    animation-fill-mode: forwards;
 }
 
 @keyframes show{
     from{
-        right: -300px;
+        right: -700px;
+        opacity: 0;
     }
     to{
         right: 50px;
+        opacity: 1;
     }
 }
 
@@ -160,17 +169,22 @@ hr{
 }
 .Sl_tit{
     position: absolute;
-    top: 120px; left: 11%;
+    top: -1080px; 
+    left: 11%;
     width:100%;
-    animation: slide 1.5s ease-out;
+}
+
+.Sl_tit.on{
+    animation: slide 1s ease-out;
+    animation-fill-mode: forwards;
 }
 @keyframes slide {
     from{
-        top: 1080px;
+        top: -1080px;
         opacity: 0;
     }
     to{
-        top: 120px;
+        top: 90px;
         opacity: 1;
     }
 }
@@ -192,14 +206,56 @@ hr{
 .Sl_tit button:hover{
     background-color: #dbd1c0;
 }
-.Sl_type{padding: 40px 0;}    
+.Sl_type{padding: 30px 0 35px 0;}    
 .Sl_type h3{
     font-size: 18px;
-    padding-top: 15px;
+    padding-top: 30px;
+}
+.Sl_type h3:first-child{
+    padding:0;
 }
 .Sl_type p{
-    font-size:18px;
-    line-height:30px;
+    font-size:16px;
+    line-height:25px;
+}
+.color{
+    display: flex;
+    justify-content: space-around;
+    width: 250px;
+}
+.colorIn{
+    width: 100px;
+    margin: auto;
+    padding-top: 15px;
+    text-align: center;
+}
+.form_1{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: #edf0e9;
+    border: none;
+    outline: none;
+    margin: auto;
+}
+.form_2{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: #eae7e2;
+    border: none;
+    outline: none;
+    margin: auto;
+}
+.form_3{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: #333333;
+    margin: auto;
+}
+.colorTxt{
+    padding-top: 10px;
 }
     
 .Sl_img{
@@ -239,9 +295,9 @@ hr{
     color: #333;
     position:relative; 
     width: 100%; 
-    top:0;transition:13s;
+    top:0;transition:6s;
 }
-.Sl_img a img:hover{transform: translateY(-83%);}
+.Sl_img a img:hover{transform: translateY(-68%);}
 /*=================================*/
 #web_scd{
     width: 100%;
@@ -253,9 +309,12 @@ hr{
 
 .Nf_tit{
     position: absolute;
-    top: 120px; left: 70%;
+    top: 1080px; left: 70%;
     width: 100%;
-    animation: slide 1.5s ease-out;
+}
+.Nf_tit.on{
+    animation: slide 1s ease-out;
+    animation-fill-mode: forwards;
 }
 @keyframes slide {
     from{
@@ -263,7 +322,7 @@ hr{
         opacity: 0;
     }
     to{
-        top: 120px;
+        top: 90px;
         opacity: 1;
     }
 }
@@ -284,14 +343,55 @@ hr{
 .Nf_tit button:hover{
     background-color: #dae8d0;
 }
-.Nf_type{padding: 40px 0;}    
+.Nf_type{padding: 30px 0 35px 0}    
 .Nf_type h3{
     font-size: 18px;
-    padding-top: 15px;
+    padding-top: 30px;
 }
 .Nf_type p{
-    font-size:18px;
-    line-height:30px;
+    font-size:16px;
+    line-height:25px;
+}
+
+.color{
+    display: flex;
+    justify-content: space-around;
+    width: 250px;
+}
+.colorIn{
+    width: 100px;
+    margin: auto;
+    padding-top: 15px;
+    text-align: center;
+}
+.shape_1{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: #000;
+    border: none;
+    outline: none;
+    margin: auto;
+}
+.shape_2{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: #333;
+    border: none;
+    outline: none;
+    margin: auto;
+}
+.shape_3{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: #fff;
+    border: 1px solid #333;
+    margin: auto;
+}
+.colorTxt{
+    padding-top: 10px;
 }
     
 .Nf_img{
@@ -332,7 +432,7 @@ hr{
     position:relative;
     width: 100%;
     top:0;
-    transition:10s;
+    transition:11s;
 }
 .Nf_img a img:hover{transform: translateY(-83%);}
 /*=================================*/
@@ -342,15 +442,17 @@ hr{
     position: relative;
 }
 h2{
-    font-size: 32px;
-    text-align: center;
+    position: absolute;
+    top: 30%; left: 50%;
+    transform: translate(-50%,-50%);
+    font-size: 28px;
 }
 .link{
     width: 35%;
     display: flex;
     justify-content: space-between;
     position: absolute;
-    bottom: 7%; ;left: 50%;
+    bottom: 30%; ;left: 50%;
     transform: translate(-50%,-50%);
 }
 .link > img{
@@ -358,11 +460,11 @@ h2{
 }
 .call b{
     font-weight: bold;
-    font-size: 30px;
+    font-size: 24px;
     line-height: 50px;
 }
 .num p{
-    font-size: 24px;
+    font-size: 18px;
     line-height: 50px;
 }
 .copy{
